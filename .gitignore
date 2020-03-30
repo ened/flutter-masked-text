@@ -1,12 +1,17 @@
 .DS_Store
-.dart_tool/
+.atom/
+.idea/
+.vscode/
 
 .packages
 .pub/
-.idea
+.dart_tool/
+pubspec.lock
+flutter_export_environment.sh
 
 build/
-ios/.generated/
-ios/Flutter/Generated.xcconfig
-ios/Runner/GeneratedPluginRegistrant.*
+Podfile
+Podfile.lock
 
+*.iml
+.flutter-plugins-dependencies
