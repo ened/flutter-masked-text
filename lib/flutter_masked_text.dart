@@ -60,8 +60,13 @@ class MaskedTextController extends TextEditingController {
   @override
   void set text(String newText) {
     if (super.text != newText) {
-      super.text = newText;
-      this.moveCursorToEnd();
+      int position = this.selection.baseOffset >= super.text.length
+           ? (newText ?? '').length
+           : this.selection.baseOffset;
+       value = value.copyWith(
+           text: newText,
+           selection: TextSelection.collapsed(offset: position),
+           composing: TextRange.empty);
     }
   }
 
